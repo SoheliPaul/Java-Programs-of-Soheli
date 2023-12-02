@@ -46,10 +46,10 @@ class HourlyEmployee extends Employee {
         }
 
         // Validate and set hours worked
-        if (hoursWorked >= 0 && hoursWorked <= 168) {
+        if (hoursWorked >= 0 && hoursWorked <= 54) {
             this.hoursWorked = hoursWorked;
         } else {
-            System.out.println("Invalid hours worked. Please enter a value between 0 and 168.");
+            System.out.println("Invalid hours worked. Please enter a value between 0 and 54.");
             // Handle the error accordingly
         }
     }
