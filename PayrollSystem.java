@@ -30,7 +30,7 @@ class HourlyEmployee extends Employee {
 
     // Constructor for HourlyEmployee with data validation
     public HourlyEmployee(int empId, String empName, String desg, double hourlyRate, int hoursWorked) {
-        super(); // Call base class constructor
+        super(); // Call base class instance
 
         // Setting employee details
         this.employeeId = empId;
@@ -46,10 +46,10 @@ class HourlyEmployee extends Employee {
         }
 
         // Validate and set hours worked
-        if (hoursWorked >= 0 && hoursWorked <= 168) {
+        if (hoursWorked >= 0 && hoursWorked <= 54) {
             this.hoursWorked = hoursWorked;
         } else {
-            System.out.println("Invalid hours worked. Please enter a value between 0 and 168.");
+            System.out.println("Invalid hours worked. Please enter a value between 0 and 54.");
             // Handle the error accordingly
         }
     }
@@ -116,7 +116,7 @@ class ExecutiveEmployee extends SalariedEmployee {
 public class PayrollSystem {
     public static void main(String[] args) {
         // Creating instances of different employee types
-        HourlyEmployee hourlyEmployee = new HourlyEmployee(1, "Rakesh Roshan", "Cashier", 100.5, 150);
+        HourlyEmployee hourlyEmployee = new HourlyEmployee(1, "Rakesh Roshan", "Cashier", 100.5, 50);
         SalariedEmployee salariedEmployee = new SalariedEmployee(2, "Suresh Krishna", "Data Architect", 20000);
         ExecutiveEmployee executiveEmployee = new ExecutiveEmployee(3, "Soheli Paul", "CEO", 20000, 20);
 
